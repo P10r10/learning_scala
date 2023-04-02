@@ -1,3 +1,4 @@
+import javax.print.attribute.standard.MediaSize.Other
 import scala.annotation.tailrec
 //import scala.language.implicitConversions
 
@@ -23,6 +24,16 @@ class Rational(n: Int, d: Int) {
   def max(other: Rational): Rational =
     if (this lessThan other) other else this
 
-  def + (i: Int): Rational = new Rational(numer + i * denom, denom)
+  def +(i: Int): Rational = new Rational(numer + i * denom, denom)
+
+  def canEqual(other: Any): Boolean = other.isInstanceOf[Rational]
+
+  override def equals(other: Any): Boolean = other match {
+    case that: Rational => (that canEqual this) &&
+      numer == that.numer &&
+      denom == that.denom
+    case _ => false
+
+  }
 
 }

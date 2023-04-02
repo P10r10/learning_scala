@@ -7,7 +7,6 @@
     <list default="true" id="8eb9ded5-a2ef-4719-8796-a375d2b54439" name="Changes" comment="rational updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Rational.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Rational.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Tests.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Tests.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680454423103</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="rational updates">
+      <created>1680466725096</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680466725096</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
