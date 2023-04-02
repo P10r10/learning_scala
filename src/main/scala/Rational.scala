@@ -1,6 +1,6 @@
 import javax.print.attribute.standard.MediaSize.Other
 import scala.annotation.tailrec
-//import scala.language.implicitConversions
+import scala.language.implicitConversions
 
 class Rational(n: Int, d: Int) {
   require(d != 0, "A denominator cannot be zero!")
@@ -26,6 +26,8 @@ class Rational(n: Int, d: Int) {
 
   def +(i: Int): Rational = new Rational(numer + i * denom, denom)
 
+  def +(i: Rational): Rational = i add this
+
   def canEqual(other: Any): Boolean = other.isInstanceOf[Rational]
 
   override def equals(other: Any): Boolean = other match {
@@ -33,7 +35,10 @@ class Rational(n: Int, d: Int) {
       numer == that.numer &&
       denom == that.denom
     case _ => false
-
   }
 
+}
+
+object Rational {
+  implicit def intToRational(x: Int): Rational = new Rational(x)
 }

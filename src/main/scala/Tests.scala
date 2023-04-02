@@ -8,7 +8,7 @@ object Tests extends App {
   println(oneHalf max twoFifths)
   println(new Rational(66, 42))
   println(oneHalf + 1)
-  println("HERE:")
+  println(1 + twoFifths)
   println(twoFifths equals oneHalf)
   println(twoFifths equals new Rational(2, 5))
   println(new Rational(1, 2) equals oneHalf)
