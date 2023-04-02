@@ -1,7 +1,16 @@
-class Rational(val numer: Int, val denom: Int) {
-  require(denom != 0, "A denominator cannot be zero!")
+import scala.annotation.tailrec
+//import scala.language.implicitConversions
+
+class Rational(n: Int, d: Int) {
+  require(d != 0, "A denominator cannot be zero!")
+  private val g: Int = gcd(n.abs, d.abs)
+  val numer: Int = n / g
+  val denom: Int = d / g
 
   def this(n: Int) = this(n, 1) // auxiliary constructor
+
+  @tailrec
+  private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 
   override def toString: String = numer + "/" + denom
 
@@ -13,4 +22,7 @@ class Rational(val numer: Int, val denom: Int) {
 
   def max(other: Rational): Rational =
     if (this lessThan other) other else this
+
+  def + (i: Int): Rational = new Rational(numer + i * denom, denom)
+
 }
