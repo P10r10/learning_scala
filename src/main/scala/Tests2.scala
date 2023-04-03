@@ -4,6 +4,7 @@ object Tests2 extends App {
   val msg2 = Message("joe@cat.es", "gui@bec.ca", "msg")
   val msg3 = Message("joe@cat.es", "gui@bec.ca", "msg")
   println(msg2 == msg3)
+  println(Fingers.Thumb)
 }
 
-//Page 22
+//Page 33
